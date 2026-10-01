@@ -12,6 +12,8 @@ body {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .cabecalho {
@@ -33,6 +35,11 @@ img {
 
 .navegacao {
     margin-top: 20px;
+
+    display: block;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    padding: 8px 0;
 }
 
 .navegacao a {
@@ -82,7 +89,6 @@ img {
 }
 
 .apresentacao-imagem img {
-    width: 100%;
     border-radius: 12px;
 }
 
@@ -97,6 +103,10 @@ img {
 
 .cards {
     display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
     gap: 20px;
 }
 
